@@ -43,7 +43,7 @@ void setup() {
     delay(100); // let sensor boot up
 }
 
-uint8_t kisi=0;
+uint8_t object=0;
 
 void loop() { 
   MQTT_connect();
@@ -57,7 +57,7 @@ void loop() {
     char c=Serial.read();
     if(c=='1'){
       myFirstValue.publish(kisi);  
-      kisi++;    
+      object++;    
     }
 
     delay(1000); 
